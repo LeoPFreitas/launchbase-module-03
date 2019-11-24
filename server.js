@@ -37,6 +37,11 @@ server.get("/portfolio", function (req, res) {
     return res.render('portfolio', { items: videos })
 })
 
+server.get("/video", function (req, res) {
+    return res.send("text")
+})
+
+
 server.listen(5000, function () {
     console.log("server is running!")
 })
