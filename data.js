@@ -1,7 +1,7 @@
 module.exports = [
     {
         id: 'keMIEpZxQNI',
-        title: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        title: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
         duration: "57 min",
         price: "Free",
         featured: true
