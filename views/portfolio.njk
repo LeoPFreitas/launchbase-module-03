@@ -1,0 +1,55 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Portfolio - Leonardo Freitas</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+    <h1>Aulas</h1>
+
+    <section class="cards">
+        {% for item in items %}
+            <div class="card" id="{{item.id}}">
+                <div class="card__image-container {{ 'featured-wrapper' if item.featured' }} ">
+                    <img src="rocket-img.jpg" alt="{Imagem de {item.title}}">
+
+                    {% if item.featured %}
+                        <div class="featured">Featured</div>
+                    {% endif %}
+
+                </div>
+                <div class="card__content">
+                    <p>{{item.title}}</p>
+                </div>
+                <div class="card__info">
+                    <p>{{item.duration}}</p>
+                    <p class="card__price">{{item.price}}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </section>
+
+    <div class="modal-overlay">
+        <div class="modal">
+
+            <div class="close-modal">
+                <i class="material-icons">close</i>
+            </div>
+
+            <div class="modal-content">
+                <!-- video aqui -->
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+{% endblock %}

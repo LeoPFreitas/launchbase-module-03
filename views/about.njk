@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Sobre - Leonardo Freitas</title>
+{% endblock %}
+
+{% block content %}
+
+    <section class="perfil">
+        <div class="wrapper">
+            <div class="img">
+                <img src="{{about.avatar_url}}" alt="Imagem de {{about.name}}">
+            </div>
+            <h1>{{about.name}}</h1>
+            <h2>{{about.role}}</h2>
+            <p>{{about.desc}}</p>
+        </div>
+        <div class="links" id="links-footer">
+
+            {% for link in about.link %}
+                <a href="{{link.url}}" target='_blank'>{{ link.name }}</a>
+            {% endfor %}
+
+        </div>
+    </section>
+
+{% endblock %}
